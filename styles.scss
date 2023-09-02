@@ -1,0 +1,419 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Header {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+    margin: 0 auto;
+    &__Logo {
+        max-width: 100%;
+        &__Img {
+            width: 300px;
+        }
+    }
+
+    &__Menu {
+        max-width: 100%;
+        &__List {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            &__Item {
+                list-style: none;
+            }
+
+            &__Link {
+                text-decoration: none;
+                color: #000;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+            &__Button {
+                color: #ffffff;
+                font-size: 1.2rem;
+                font-weight: bold;
+                background-color: #e8505b;
+                border: none;
+                padding: 0.8rem 2rem 0.8rem 2rem;
+                border-radius: 0.7rem;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.Principal {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__Total {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 4rem;
+        padding-top: 3rem;
+
+        &__Izquierda {
+            width: 600px;
+            height: 600px;
+            background-color: #e8505b;
+
+            &__Form {
+                &__Titulo {
+                    width: auto;
+                    color: #ffffff;
+                    font-size: 2.5rem;
+                    text-align: center;
+                    padding-top: 3rem;
+                    margin-left: 3rem;
+                    margin-right: 3rem;
+                }
+
+                &__Input {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    padding: 3rem;
+
+                    label {
+                        color: #ffffff;
+                        margin-top: 1rem;
+                        margin-bottom: 0.5rem;
+                        text-transform: uppercase;
+                    }
+
+                    input {
+                        width: 100%;
+                        padding: 1rem;
+                        border: none;
+                    }
+
+                    button {
+                        padding: 0.8rem;
+                        margin-top: 1.8rem;
+                        width: 100%;
+                        background-color: #455a64;
+                        color: #ffffff;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        border: none;
+                        border-radius: 0.7rem;
+                        font-family: 'Roboto', sans-serif;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        &__Derecha {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            &__Img {
+                width: 600px;
+            }
+        }
+    }
+}
+
+.Wave {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.ComoFunciona {
+    background-color: #e8505b;
+    position: relative;
+    margin-top: -5px;
+    padding: 0;
+
+    &__Titulo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        h4 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            position: relative;
+            margin-top: -1px;
+        }
+    }
+
+    &__Articulos {
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        img {
+            max-width: 100%;
+            transition-property: transform;
+            transition-duration: 300ms;
+        }
+
+        img:hover {
+            transform: rotate(-4deg) scale(1.2);
+            cursor: pointer;
+        }
+    }
+}
+
+.Testimonios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__Titulo {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    &__Cards {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 20px;
+        &__Opiniones {
+            background-color: #455a64;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 1rem;
+            header {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                .Imagen {
+                    flex-basis: 10rem;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    .Perfil {
+                        max-width: 100%;
+                        display: block;
+                    }
+                }
+
+                h4 {
+                    color: #ffffff;
+                    font-size: 1.2rem;
+                }
+
+                .estrellas {
+                    max-width: 100%;
+                    position: relative;
+                    margin-top: -100px;
+
+                }
+            }
+
+            &__Texto {
+                font-size: 1.2rem;
+                color: #ffffff;
+                line-height: 1.5;
+                margin: 2rem 0 0 0;
+                padding-left: 2rem;
+                position: relative;
+            }
+        }
+    }
+}
+
+.Testimonios__Cards__Opiniones:nth-child(1) {
+    grid-column: 1/4;
+}
+
+.Testimonios__Cards__Opiniones:nth-child(3) {
+    grid-column: 5/6;
+    grid-row: 1/4;
+}
+
+.Testimonios__Cards__Opiniones:nth-child(4) {
+    grid-column: 1/3;
+}
+
+.Testimonios__Cards__Opiniones:nth-child(5) {
+    grid-column: 3/5;
+}
+.Restaurantes{
+    background-color: #eceeef;
+    &__Titulo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: #455a64;
+    }
+    &__Cards{
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+        padding-bottom: 2rem;
+        &__Valoraciones{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-gap: 30px;
+            background-color: #ffffff;
+            padding:2rem 3rem 2rem 3rem;
+            border-radius: 1rem;
+            box-shadow: 1px 2px 10px 2px rgb(183, 183, 183);
+            &__Img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    max-width: 100%;
+                    padding: 0;
+                }
+            }
+            &__Contenido{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                h3{
+                    color: #e8505b;
+                    font-size: 1.5rem;
+                    position: relative;
+                    margin-top: 10px;
+                }
+                p{
+                    line-height: 2rem;
+                    position: relative;
+                    margin-top: -10px;
+                }
+            }
+        }
+    }
+}
+.AppComida{
+    padding-bottom: 2rem;
+    &__Titulo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: #455a64;
+    }
+    &__Contenido{
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        &__Img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                max-width: 100%;
+            }
+        }
+        &__Texto{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            font-size: 1.3rem;
+            color: #455a64;
+            button{
+                background-color: #e8505b;
+                padding: 0.8rem 2rem 0.8rem 2rem;
+                color: #ffffff;
+                font-size: 1.2rem;
+                border: none;
+                border-radius: 0.7rem;
+                cursor: pointer;
+                font-weight: bold;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+    }
+}
+.Footer{
+    background-color: #455a64;
+    &__Contenido{
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        &__Grid{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            &__Titulo{
+                color: #ffffff;
+                font-size: 1.5rem;
+            }
+            &__Texto{
+                color: #ffffff;
+                font-size: 1.2rem;
+                line-height: 2rem;
+                position: relative;
+                margin-top: -25px;
+            }
+            &__Lista{
+                ul{
+                    line-height: 2.1rem;
+                    list-style: none;
+                    li{ 
+                        a{
+                            text-decoration: none;
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__AppComida{
+        background-color: #e8505b;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 1rem 0 1rem 0;
+    }
+}
